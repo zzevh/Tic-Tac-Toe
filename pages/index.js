@@ -9,6 +9,7 @@ import Router, { useRouter } from "next/router";
 import AnimatePage from '../components/AnimatePage';
 import TimerBar from "../components/TimerBar";
 import useNoInitialEffect from "../helper/UseNoInitialEffect";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
 
@@ -553,6 +554,7 @@ export default function Home() {
 
 
   return (
+
     <AnimatePage>
       <div className="app font-sans relative">
         <GameStartIntroModal open={openIntroModal}></GameStartIntroModal>
@@ -561,7 +563,7 @@ export default function Home() {
           open={isMatchDone} win={isWin}></GameResultModal>
         <AlertModal open={openAlertModal} clickExit={handleResultModalExit}></AlertModal>
 
-
+        <Analytics />
 
         <div className="max-w-4xl mx-auto m-0 p-3 h-screen relative overflow-hidden xs:overflow-auto">
           {isHost !== null &&
