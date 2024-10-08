@@ -61,20 +61,20 @@ export default function GameResultModal(props) {
         const comp = [];
         if (win === true) {
             comp.push(
-                <div key={uuidv4()} className="mx-auto bg-opacity-20 flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10 md:mx-0 md:h-10 md:w-10 lg:mx-0 lg:h-10 lg:w-10">
-                    <EmojiHappyIcon className="h-6 w-6 text-green-300" aria-hidden="true" />
+                <div key={uuidv4()} className="mx-auto bg-opacity-20 flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 sm:mx-0 sm:h-10 sm:w-10 md:mx-0 md:h-10 md:w-10 lg:mx-0 lg:h-10 lg:w-10">
+                    <EmojiHappyIcon className="h-6 w-6 text-blue-500" aria-hidden="true" />
                 </div>);
             return comp;
         } else if (win === false) {
             comp.push(
-                <div key={uuidv4()} className="mx-auto bg-opacity-20 flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10 md:mx-0 md:h-10 md:w-10 lg:mx-0 lg:h-10 lg:w-10">
-                    <EmojiSadIcon className="h-6 w-6 text-red-300" aria-hidden="true" />
+                <div key={uuidv4()} className="mx-auto bg-opacity-20 flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 sm:mx-0 sm:h-10 sm:w-10 md:mx-0 md:h-10 md:w-10 lg:mx-0 lg:h-10 lg:w-10">
+                    <EmojiSadIcon className="h-6 w-6 text-blue-500" aria-hidden="true" />
                 </div>);
             return comp;
         } else if (open && win === null) {
             comp.push(
-                <div key={uuidv4()} className="mx-auto bg-opacity-20 flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10 md:mx-0 md:h-10 md:w-10 lg:mx-0 lg:h-10 lg:w-10">
-                    <FlagIcon className="h-6 w-6 text-blue-300" aria-hidden="true" />
+                <div key={uuidv4()} className="mx-auto bg-opacity-20 flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 sm:mx-0 sm:h-10 sm:w-10 md:mx-0 md:h-10 md:w-10 lg:mx-0 lg:h-10 lg:w-10">
+                    <FlagIcon className="h-6 w-6 text-blue-500" aria-hidden="true" />
                 </div>);
             return comp;
         } else {
@@ -99,7 +99,7 @@ export default function GameResultModal(props) {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <Dialog.Overlay className="fixed inset-0 bg-white bg-opacity-10 transition-opacity" />
+                        <Dialog.Overlay className="fixed inset-0 bg-blue-500 bg-opacity-10 transition-opacity" />
                     </Transition.Child>
 
                     {/* This element is to trick the browser into centering the modal contents. */}
@@ -115,7 +115,7 @@ export default function GameResultModal(props) {
                         leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                         leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                     >
-                        <div className="xs:min-w-full bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-10 relative inline-block  rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full md:my-8 md:max-w-lg md:w-full  lg:my-8 lg:max-w-lg lg:w-full">
+                        <div className="xs:min-w-full bg-blue-500 bg-opacity-10 backdrop-blur-lg border border-white border-opacity-10 relative inline-block  rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full md:my-8 md:max-w-lg md:w-full  lg:my-8 lg:max-w-lg lg:w-full">
                             <div className="bg-transparent px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                 <div className="sm:flex align-middle items-center md:flex  lg:flex">
                                     <RenderEmoji />
@@ -134,7 +134,7 @@ export default function GameResultModal(props) {
                             <div className="bg-transparent px-4 py-3 xs:flex xs:flex-row-reverse sm:flex-row-reverse sm:px-6 sm:flex md:flex-row-reverse md:px-6 md:flex lg:flex-row-reverse lg:px-6 lg:flex xs:justify-center">
                                 <button
                                     type="button"
-                                    className="inline-flex bg-gradient-shadow relative justify-center rounded-md border-0 shadow-sm h-fit p-2 bg-gradient-to-tr from-[#F7B12D] via-[#FA8247] to-[#FC585D] text-base font-medium text-white hover:opacity-80 focus:outline-none focus:ring-4 focus:ring-offset-0 focus:ring-[#f7b02d39] sm:ml-3 sm:w-auto md:ml-3 md:w-auto lg:ml-3 lg:w-auto " title='Play Again'
+                                    className="inline-flex bg-gradient-shadow relative justify-center rounded-md border-0 shadow-sm h-fit p-2 bg-gradient-to-tr from-[#8cc5ff] via-[#4e8cf0] to-[#1065c6] text-base font-medium text-white hover:opacity-80 focus:outline-none focus:ring-4 focus:ring-offset-0 focus:ring-[#1065c6] sm:ml-3 sm:w-auto md:ml-3 md:w-auto lg:ml-3 lg:w-auto " title='Play Again'
                                     onClick={() => playAgain()}>
                                     <RefreshIcon className="h-7 w-7 text-white text-opacity-90" aria-hidden="true" />
                                 </button>

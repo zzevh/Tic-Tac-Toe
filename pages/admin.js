@@ -42,7 +42,7 @@ export default function admin() {
 
     return (
         <>
-            <div>admin</div>
+            <div>szybkie staty</div>
             <p>Rooms: {JSON.stringify(rooms)}</p>
             <p>Active Rooms: {JSON.stringify(activeRooms)}</p>
         </>

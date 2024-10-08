@@ -40,7 +40,7 @@ a {
 
 body {
   margin: 0;
-  background-color: #000000;
+  background-color: #1a1f27;
 }
 
 .time-container {
@@ -74,7 +74,7 @@ body {
   position: relative;
   cursor: pointer;
   z-index: 1;
-  background: #36374B;
+  background: #2e3a4b;
   border-radius: 10px;
 }
 
@@ -113,7 +113,7 @@ body {
 }
 
 .cell.circle::before {
-  background: linear-gradient(#AFACFA, #746BFA, #5F54FB);
+  background: linear-gradient(#8cc5ff, #4e8cf0, #1065c6);
 }
 
 .board.x .cell:not(.x):not(.circle):hover::before,
@@ -186,13 +186,13 @@ body {
 .symbol.circle::before {
   width: calc(var(--mark-size) /2.5);
   height: calc(var(--mark-size) / 2.5);
-  background: linear-gradient(#AFACFA, #746BFA, #5F54FB);
+  background: linear-gradient(#2475C5, #39527B, #103992);
 }
 
 .symbol.circle::after {
   width: calc(var(--mark-size) * .2);
   height: calc(var(--mark-size) * .2);
-  background-color: #040B18;
+  background-color: #4b66a4;
   z-index: 0;
 }
 
@@ -201,7 +201,7 @@ body {
 .board.circle .cell:not(.x):not(.circle):hover::after {
   width: calc(var(--mark-size) * .45);
   height: calc(var(--mark-size) * .45);
-  background-color: #36374B;
+  background-color: #363d4b;
 }
 
 
@@ -246,19 +246,19 @@ body {
 
 .cell.x.lose::before,
 .cell.x.lose::after {
-  background-color: #53546c;
+  background-color: #1065c6;
   transition: 1s ease-in-out;
 }
 
 .cell.circle.lose::before {
-  background: #53546c;
+  background: #1065c6;
   transition: 1s ease-in-out;
 }
 
 .loader {
   width: 48px;
   height: 48px;
-  background: #AFACFA;
+  background: #1065c6;
   display: inline-block;
   border-radius: 50%;
   box-sizing: border-box;

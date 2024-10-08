@@ -24,7 +24,7 @@ export default function AlertModal(props) {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <Dialog.Overlay className="fixed inset-0 bg-white bg-opacity-10 transition-opacity" />
+                        <Dialog.Overlay className="fixed inset-0 bg-blue-500 bg-opacity-10 transition-opacity" />
                     </Transition.Child>
 
                     {/* This element is to trick the browser into centering the modal contents. */}
@@ -40,11 +40,11 @@ export default function AlertModal(props) {
                         leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                         leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                     >
-                        <div className="xs:min-w-full bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-10 relative inline-block  rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full md:my-8 md:max-w-lg md:w-full  lg:my-8 lg:max-w-lg lg:w-full">
+                        <div className="xs:min-w-full bg-blue-500 bg-opacity-10 backdrop-blur-lg border border-white border-opacity-10 relative inline-block  rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full md:my-8 md:max-w-lg md:w-full  lg:my-8 lg:max-w-lg lg:w-full">
                             <div className="bg-transparent px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                 <div className="sm:flex align-middle items-center md:flex  lg:flex">
                                     <div className="mx-auto bg-opacity-20 flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10 md:mx-0 md:h-10 md:w-10 lg:mx-0 lg:h-10 lg:w-10">
-                                        <EmojiSadIcon className="h-6 w-6 text-red-300" aria-hidden="true" />
+                                        <EmojiSadIcon className="h-6 w-6 text-blue-500" aria-hidden="true" />
                                     </div>
                                     <div className="mt-3 xs:mb-3 content-center sm:mt-0 sm:ml-4 sm:text-left md:text-left md:ml-4 md:mt-0 lg:text-left lg:ml-4 lg:mt-0 xs:text-center">
                                         <Dialog.Title as="h3" className="text-base leading-6 font-medium text-white text-opacity-90">

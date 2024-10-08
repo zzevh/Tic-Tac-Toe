@@ -613,13 +613,13 @@ export default function Home() {
             (
               <div className="flex xs:flex-col">
                 <div className="flex flex-col w-full p-5">
-                  <div className="text-5xl xs:text-4xl font-bold text-[#F7B12D] mt-9">Online Tictactoe</div>
+                  <div className="text-5xl xs:text-4xl font-bold text-[#a9d4ff] mt-9">Online Tictactoe</div>
                   <div className="text-4xl xs:text-3xl font-light mt-9">Wassup, {myName}!</div>
                   <div className="mt-3 xs:text-sm max-w-lg xs:max-w-xs">This project is designed and developed using <b>ReactJS</b>, <b>NextJS</b>, <b>Socket.IO</b>, and <b>Tailwind</b>.</div>
                   <div className="flex mt-12">
                     <button disabled={!socket}
                       id="findMatchBtn"
-                      className="bg-gradient-shadow relative focus:outline-none focus:ring-4 focus:ring-offset-0 focus:ring-[#f7b02d39] rounded-full w-36 border-0 shadow-sm px-7 py-2 bg-gradient-to-tr from-[#F7B12D] via-[#FA8247] to-[#FC585D] text-sm font-medium text-white hover:opacity-90 focus:ring-offset-transparent sm:ml-3 sm:text-sm"
+                      className="bg-gradient-shadow relative focus:outline-none focus:ring-4 focus:ring-offset-0 focus:ring-[#f7b02d39] rounded-full w-36 border-0 shadow-sm px-7 py-2 bg-gradient-to-tr from-[#2475C5] via-[#39527B] to-[#206ABD] text-sm font-medium text-white hover:opacity-90 focus:ring-offset-transparent sm:ml-3 sm:text-sm"
                       onClick={handleJoinRoom}>Find Match</button>
                   </div>
 
@@ -633,25 +633,26 @@ export default function Home() {
                   </div>
 
                   <div className="grid  gap-4 grid-cols-2">
-                    <div id="total-matches-container" className="bg-gradient-shadow relative flex flex-col justify-between bg-opacity-80 bg-[#EA0599] p-3 rounded-md h-20 w-28">
+                    <div id="total-matches-container" className="bg-gradient-shadow relative flex flex-col justify-between bg-opacity-80 bg-[#2475C5] p-3 rounded-md h-20 w-28">
                       <div className="text-xs">Total Match</div>
                       <div className="font-semibold text-2xl">{myRecords.total}</div>
                     </div>
 
-                    <div id="total-matches-container" className="bg-gradient-shadow relative flex flex-col justify-between bg-opacity-80 bg-[#9A0F98] p-3 rounded-md h-20 w-28">
+                    <div id="total-matches-container" className="bg-gradient-shadow relative flex flex-col justify-between bg-opacity-80 bg-[#2475C5] p-3 rounded-md h-20 w-28">
                       <div className="text-xs">Win Rate</div>
                       <div className="font-semibold text-xl">{(myRecords.total > 0 ? (myRecords.wins + 0.5 * myRecords.draws) / myRecords.total * 100 : 0).toFixed(2)}%</div>
                     </div>
 
-                    <div id="total-matches-container" className="bg-gradient-shadow relative flex flex-col justify-between bg-opacity-80 bg-[#6A0572] p-3 rounded-md h-20 w-28">
+                    <div id="total-matches-container" className="bg-gradient-shadow relative flex flex-col justify-between bg-opacity-80 bg-[#143d6c] p-3 rounded-md h-20 w-28">
                       <div className="text-xs">Draw</div>
                       <div className="font-semibold text-2xl">{myRecords.draws}</div>
                     </div>
 
-                    <div id="total-matches-container" className="bg-gradient-shadow relative flex flex-col justify-between bg-opacity-80 bg-[#39065A] p-3 rounded-md h-20 w-28">
+                    <div id="total-matches-container" className="bg-gradient-shadow relative flex flex-col justify-between bg-opacity-80 bg-[#143d6c] p-3 rounded-md h-20 w-28">
                       <div className="text-xs">Lose</div>
                       <div className="font-semibold text-2xl">{myRecords.loses}</div>
                     </div>
+
 
                     {/* <div id="total-matches-container" className="col-span-2 w-full bg-gradient-shadow relative flex flex-col justify-between bg-opacity-80 bg-[#FC585D] p-3 rounded-md">
                       <div className="text-xs">Rank Points</div>
@@ -682,6 +683,7 @@ export default function Home() {
 
 
                 </div>
+
               </div>
 
             )
@@ -703,9 +705,9 @@ export default function Home() {
             </div>
           )}
         </div>
-
-        <p>&copy; 2024 ZHV BKrupka. All rights reserved.</p>
-
+        <footer className="justify-center flex flex-col items-center ">
+          <p>Website created by ZHV BKrupka for fun</p>
+        </footer>
       </div>
     </AnimatePage>
   )

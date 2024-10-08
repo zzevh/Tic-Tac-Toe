@@ -25,7 +25,7 @@ function TimerBar({ left, start, secs, matchDone, timer }) {
                 borderRadius: '20px',
                 direction: left || 'rtl'
             }}>
-            <div className="bg-gradient-shadow relative bar bg-gradient-to-tr  from-[#F7B12D] via-[#FA8247] to-[#FC585D]"
+            <div className="bg-gradient-shadow relative bar bg-gradient-to-tr  from-[#8cc5ff] via-[#4e8cf0] to-[#1065c6]"
                 style={{
                     width: width + '%',
                     borderRadius: '20px',
