@@ -561,6 +561,8 @@ export default function Home() {
           open={isMatchDone} win={isWin}></GameResultModal>
         <AlertModal open={openAlertModal} clickExit={handleResultModalExit}></AlertModal>
 
+
+
         <div className="max-w-4xl mx-auto m-0 p-3 h-screen relative overflow-hidden xs:overflow-auto">
           {isHost !== null &&
             (
