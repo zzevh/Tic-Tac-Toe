@@ -82,12 +82,13 @@ export default function Signin() {
                 {/* AdSense Block */}
                 <div>
                     <ins className="adsbygoogle"
-                        style={{ display: 'block' }}
+                        style={{ display: 'block', width: '100%', height: '300px', minWidth: '300px' }}
                         data-ad-client="ca-pub-2086544123628687"
                         data-ad-slot="7029626634"
                         data-ad-format="auto"
                         data-full-width-responsive="true">
                     </ins>
+
                 </div>
             </div>
         </AnimatePage>
