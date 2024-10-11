@@ -587,12 +587,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2086544123628687"
-                    crossorigin="anonymous"></script>
 
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2086544123628687"
-                    crossorigin="anonymous"></script>
-  
 
                   <div className="flex items-center">
                     <div className={"flex w-28 flex-col justify-end  " + (!isMyTurn ? "" : "opacity-50")}>
