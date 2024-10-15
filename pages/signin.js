@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 export default function Signin() {
     const [name, setName] = useState('');
     const adInitialized = useRef(false); // Ref to track if the ad has been initialized
+    const fundingChoicesInitialized = useRef(false); // Ref to track if the Funding Choices has been initialized
 
     useEffect(() => {
         if (!(typeof getFromStorage('player-name') === 'undefined' ||
@@ -32,6 +33,37 @@ export default function Signin() {
             };
 
             adInitialized.current = true; // Mark that the ad has been initialized
+        }
+    }, []);
+
+    useEffect(() => {
+        // Load the Funding Choices script only once
+        if (!fundingChoicesInitialized.current) {
+            const fundingScript = document.createElement('script');
+            fundingScript.async = true;
+            fundingScript.src = "https://fundingchoicesmessages.google.com/i/pub-2086544123628687?ers=1";
+            document.body.appendChild(fundingScript);
+
+            const inlineScript = document.createElement('script');
+            inlineScript.innerHTML = `(function() {
+                function signalGooglefcPresent() {
+                    if (!window.frames['googlefcPresent']) {
+                        if (document.body) {
+                            const iframe = document.createElement('iframe');
+                            iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;';
+                            iframe.style.display = 'none';
+                            iframe.name = 'googlefcPresent';
+                            document.body.appendChild(iframe);
+                        } else {
+                            setTimeout(signalGooglefcPresent, 0);
+                        }
+                    }
+                }
+                signalGooglefcPresent();
+            })();`;
+            document.body.appendChild(inlineScript);
+
+            fundingChoicesInitialized.current = true; // Mark that the Funding Choices has been initialized
         }
     }, []);
 

@@ -9,7 +9,7 @@ import Router, { useRouter } from "next/router";
 import AnimatePage from '../components/AnimatePage';
 import TimerBar from "../components/TimerBar";
 import useNoInitialEffect from "../helper/UseNoInitialEffect";
-import { Analytics } from "@vercel/analytics/react"
+
 
 export default function Home() {
 
@@ -563,7 +563,7 @@ export default function Home() {
           open={isMatchDone} win={isWin}></GameResultModal>
         <AlertModal open={openAlertModal} clickExit={handleResultModalExit}></AlertModal>
 
-        <Analytics />
+
 
         <div className="max-w-4xl mx-auto m-0 p-3 h-screen relative overflow-hidden xs:overflow-auto">
           {isHost !== null &&
@@ -625,7 +625,6 @@ export default function Home() {
                       className="bg-gradient-shadow relative focus:outline-none focus:ring-4 focus:ring-offset-0 focus:ring-[#f7b02d39] rounded-full w-36 border-0 shadow-sm px-7 py-2 bg-gradient-to-tr from-[#2475C5] via-[#39527B] to-[#206ABD] text-sm font-medium text-white hover:opacity-90 focus:ring-offset-transparent sm:ml-3 sm:text-sm"
                       onClick={handleJoinRoom}>Find Match</button>
                   </div>
-
                 </div>
 
                 <div className="flex xs:w-full h-min flex-wrap rounded-md p-5 xs:pt-7">
